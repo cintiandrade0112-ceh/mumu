@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "meu-tempo",
+    "name": "Mumu",
     "slug": "meu-tempo",
+    "scheme": "mumu",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,15 +11,39 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.meutempo.app",
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM",
+        "USE_EXACT_ALARM",
+        "POST_NOTIFICATIONS",
+        "VIBRATE"
+      ],
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#FFFFFF",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       }
     },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#1F7A6D",
+          "defaultChannel": "lembretes-rotina"
+        }
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "owner": "fabriciandrade2907",
+    "extra": {
+      "eas": {
+        "projectId": "5240e02b-ae33-4e10-b59b-54c25e62b2b5"
+      }
     }
   }
 }
